@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Add a to_xhtml() method to Perl6::Perldoc::Parser
 License:    GPL+ or Artistic
