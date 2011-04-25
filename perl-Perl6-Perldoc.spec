@@ -48,10 +48,6 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes README
-%{_mandir}/man3/*
+%{_bindir}/*
+%{_mandir}/man?/*
 %perl_vendorlib/*
-/usr/bin/perldoc2text
-/usr/bin/perldoc2xhtml
-/usr/share/man/man1/perldoc2text.1.lzma
-/usr/share/man/man1/perldoc2xhtml.1.lzma
-
