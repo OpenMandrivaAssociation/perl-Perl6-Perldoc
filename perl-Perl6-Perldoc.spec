@@ -1,22 +1,23 @@
 %define upstream_name    Perl6-Perldoc
-%define upstream_version v0.0.5
+%define upstream_version 0.000008
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 
-Summary:    Add a to_xhtml() method to Perl6::Perldoc::Parser
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Perl6/%{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Add a to_xhtml() method to Perl6::Perldoc::Parser
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Perl6/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: perl(Filter::Simple)
-BuildRequires: perl(Scalar::Util)
-BuildRequires: perl(Test::More)
-BuildRequires: perl(version)
-BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildRequires:	perl-devel
+BuildRequires:	perl(ExtUtils::MakeMaker)
+BuildRequires:	perl(Filter::Simple)
+BuildRequires:	perl(Scalar::Util)
+BuildRequires:	perl(Test::More)
+BuildRequires:	perl(version)
+BuildArch:	noarch
 
 %description
 This module preprocesses your code from the point at which the module is
@@ -31,23 +32,19 @@ This means that, so long as your program starts with:
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+perl Makefile.PL INSTALLDIRS=vendor
+%make
 
 %check
-%{make} test
+%make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
-%doc Changes README
+%doc Changes META.yml MYMETA.yml README
 %{_bindir}/*
-%{_mandir}/man?/*
-%perl_vendorlib/*
+%{_mandir}/man1/*
+%{_mandir}/man3/*
+%{perl_vendorlib}/*
+
