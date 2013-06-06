@@ -1,15 +1,14 @@
 %define upstream_name    Perl6-Perldoc
-%define upstream_version 0.000008
-
+%define upstream_version 0.000011
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Version:	%perl_convert_version 0.000011
 Release:	1
 
 Summary:	Add a to_xhtml() method to Perl6::Perldoc::Parser
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Perl6/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Perl6/Perl6-Perldoc-0.000011.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(ExtUtils::MakeMaker)
@@ -47,4 +46,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{_mandir}/man1/*
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+
 
