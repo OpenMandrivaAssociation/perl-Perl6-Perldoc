@@ -1,6 +1,5 @@
 %define upstream_name    Perl6-Perldoc
-%define upstream_version 0.000008
-
+%define upstream_version 0.000011
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.000011
 Release:	1
