@@ -2,7 +2,7 @@
 %define upstream_version 0.000011
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.000011
-Release:	2
+Release:	3
 
 Summary:	Add a to_xhtml() method to Perl6::Perldoc::Parser
 License:	GPL+ or Artistic
