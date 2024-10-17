@@ -7,7 +7,7 @@ Release:	3
 Summary:	Add a to_xhtml() method to Perl6::Perldoc::Parser
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Perl6/Perl6-Perldoc-0.000011.tar.gz
 
 BuildRequires:	perl-devel
