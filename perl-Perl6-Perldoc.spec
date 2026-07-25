@@ -1,14 +1,14 @@
 %define upstream_name    Perl6-Perldoc
-%define upstream_version 0.000011
+%define upstream_version 0.000013
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.000011
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Add a to_xhtml() method to Perl6::Perldoc::Parser
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Perl6/Perl6-Perldoc-0.000011.tar.gz
+Url:		https://metacpan.org/dist/Perl6-Perldoc
+Source0:	https://cpan.metacpan.org/authors/id/D/DC/DCONWAY/Perl6-Perldoc-0.000013.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
