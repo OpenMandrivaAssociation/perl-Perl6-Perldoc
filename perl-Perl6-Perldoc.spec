@@ -1,8 +1,7 @@
 %define upstream_name    Perl6-Perldoc
-%define upstream_version 0.000013
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.000013
+Release:	2
 
 Summary:	Add a to_xhtml() method to Perl6::Perldoc::Parser
 License:	GPL+ or Artistic
@@ -29,7 +28,7 @@ This means that, so long as your program starts with:
     use Perl6::Perldoc;
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
